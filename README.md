@@ -23,7 +23,7 @@ heidi.lischer@ieu.uzh.ch
 9.30 - 9.40 | **Welcome & Introduction** | SW&HTL
 9.40 - 12.30 | **Variant Calling 2** <br /> [Presentation](VARIANT_CALLING/Variant_Calling2.pdf)  \| [Hands-on](VARIANT_CALLING/Exercises_Variant_Calling.md) | SW
  | |
-13.30 - 17.00 | **RNA-seq** <br /> [Presentation](RNAseq/RNAseq.pdf) \| [Hands-on](RNAseq/Exercises_RNAseq.pdf) | HTL
+13.30 - 16.00 | **RNA-seq** <br /> [Presentation](RNAseq/RNAseq.pdf) \| [Hands-on](RNAseq/Exercises_RNAseq.pdf) | HTL
 16.00 - 17.00 | *Talk:* Dr. Christine Grossen (UZH): RAD-seq [pdf](TALKS/RADseq_Grossen.pdf) |
 17.00 - 17.30 | **Making sense of gene lists** <br /> [Presentation](GENE_LISTS/MakingSenseOfGeneLists.pdf)  \| [Hands-on](GENE_LISTS/Exercises_MakingSenseOfGeneLists.md) | SW
 
