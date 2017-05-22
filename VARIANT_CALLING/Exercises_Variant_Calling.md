@@ -3,7 +3,16 @@
 
 ### Evolution in Action
 ### Stefan Wyder
-
+  
+![URPP logo](../Logo_URPP_kl2.png)  
+  
+#### Topics
+- Variant calling using FreeBayes
+- Filtering variants
+- Visualizing aligned reads
+- Variant calling using GATK
+- Variant Annotation using SnpEff & SnpSift
+  
 
 This training gives an introduction to the use of some popular NGS analysis at the command line. It presents several tools and some code, which can be used as a basis for your own workflows. However, be aware that for your own analysis different parameters than the ones used here might be better suited. Read carefully the documentation and take care that you understand what every parameter does.  
 
@@ -12,6 +21,7 @@ This training gives an introduction to the use of some popular NGS analysis at t
 
 
 The approaches presented here work for Illumina or Ion Torrent data.
+
 
 ### Download data
 
@@ -78,8 +88,9 @@ Many downstream applications only work with compressed & indexed vcf files using
 bgzip Ecoli_DH10B-rmdup.vcf   # makes Ecoli_DH10B-rmdup.vcf.gz
 tabix -p vcf Ecoli_DH10B-rmdup.vcf.gz
 ```
-As we have to do this for each vcf file, we write a script that does the job. Save the script below as `indexVCF.sh` and make it executable. It sorts, compresses and indexes a vcf file by doing: `./indexVCF.sh VcfFile` 
+As we have to do this for each vcf file, we write a script that does the job. Save the script below as `indexVCF.sh` and make it executable. It sorts, compresses and indexes a vcf file by doing: `./indexVCF.sh Ecoli_DH10B-rmdup.vcf` 
 ```
+#!/bin/bash
 # processes a vcf file for downstream analysis: sorting by chromosome and position, compressing, and indexing a vcf file
 # from http://wiki.bits.vib.be/index.php/NGS_variant_analysis_custom_functions_and_code
 
@@ -141,14 +152,15 @@ vt peek Ecoli_DH10B-rmdup.vcf.gz
 ```
 All but 1 variant have been filtered out as low-quality.
 
-
-An alternative graphical summary with more information using bcftools:
+<details>
+<summary>(Optional) An alternative graphical summary with more information using bcftools:</summary>
 ```
 ~/software/SAMTOOLS/bcftools-1.3/bcftools stats -F EcoliDH10B.fa -s - Ecoli_DH10B-rmdup.vcf.gz > Ecoli_DH10B-rmdup.vcf.gz.stats
 sudo apt-get install python-matplotlib
 sudo apt-get install texlive-latex-base
 ~/software/SAMTOOLS/bcftools-1.3/plot-vcfstats -p bcftools_plots/ Ecoli_DH10B-rmdup.vcf.gz.stats
 ```
+</details>
 
 #### samtools/bcftools versions
 
