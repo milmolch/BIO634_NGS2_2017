@@ -44,7 +44,7 @@ awk 'NR>1 {print $1}' diffExp_N-A.txt  | sed 's/"//g' > diffExp_N-A.allGenes.txt
 
 Run an over-representation analyis using [GOrilla](http://cbl-gorilla.cs.technion.ac.il/). Use the basic functionality <Two unranked lists of genes (target and background lists)> and upload the 2 files we just prepared. In step 4 choose <Process> and run the analysis.
 
-Look at the table output below the figure. Click at some significantly enriched processes for the full description. It is well visible from the graph the ancestors of highly significantly GO categories often also become significant (Ancestors contain the genes of their children).
+Look at the table output below the figure. Click at some significantly enriched processes for the full description. It is well visible from the graph the parents of highly significantly GO categories often also become significant (Parents contain all the genes of their children).
 
 
 ## Gene Set Enrichment Analysis (GSEA)
